@@ -1,0 +1,34 @@
+Jeden z dobrych projektów, który można dodać do portfolio to stworzenie RESTful API do zarządzania książkami lub biblioteką.
+
+API może zawierać następujące funkcjonalności:
+
+
+Baza danych - sqlite ? 
+Dodawanie nowych książek do biblioteki
+Aktualizacja informacji o książce, takich jak tytuł, autor, gatunek, rok wydania itp.
+Usuwanie książek z biblioteki
+Wyszukiwanie książek po autorze, tytule lub gatunku
+Wyświetlanie listy wszystkich książek w bibliotece
+uzytkownik moze wypozyczyc ksiazke w pewnym terminie?
+
+
+Dodanie wyszukiwarki, która pozwala użytkownikom na przeszukiwanie kolekcji książek w oparciu o różne kryteria, takie jak tytuł, autor, wydawca, rok publikacji, temat i wiele innych.
+
+System wypożyczania książek: Dodanie funkcjonalności pozwalającej użytkownikom na wypożyczanie książek. To rozwiązanie powinno uwzględniać informacje o dostępności książek, 
+limit czasu wypożyczenia oraz automatyczne powiadomienia o zbliżającym się terminie zwrotu.
+Rekomendacje książek: System rekomendacji książek, który na podstawie wcześniejszych preferencji użytkowników proponuje im nowe tytuły do przeczytania.
+Komentarze i oceny: Funkcjonalność pozwalająca użytkownikom na dodawanie recenzji, ocenianie książek, dzielenie się swoimi opiniami i wskazywanie wad i zalet wybranej książki.
+Integracja z bibliotekami zewnętrznymi: Integracja z bibliotekami zewnętrznymi, takimi jak Goodreads czy LibraryThing, umożliwiająca użytkownikom korzystanie z bardziej 
+rozbudowanych funkcjonalności i zwiększenie możliwości personalizacji.
+Zarządzanie użytkownikami: Panel administracyjny pozwalający na zarządzanie kontami użytkowników, umożliwiający blokowanie lub usuwanie nieaktywnych kont, a także śledzenie historii wypożyczeń.
+Napisz do:
+
+
+
+Dodatkowo, można rozważyć dodanie autoryzacji i uwierzytelnienia, aby API było bezpieczne i chronione przed nieupoważnionym dostępem. Można także dodać testy jednostkowe i integracyjne, aby upewnić się, że API działa poprawnie.
+
+
+
+Ważne jest, aby utworzyć dokumentację API, która opisuje każdą funkcjonalność oraz sposób korzystania z API. Można to zrobić, używając np. narzędzia Swagger lub OpenAPI.
+
+Cały projekt można umieścić na platformie GitHub i dodać do portfolio, aby pokazać swoje umiejętności w tworzeniu web API w .NET 5.
