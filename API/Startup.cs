@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using API.AutoMapper;
 using API.Data;
 using API.Interfaces;
 using API.Repositories;
@@ -45,7 +46,9 @@ namespace API
                 });
             services.AddControllers();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<ITokenInterface, TokenRepository>();
+            services.AddAutoMapper(typeof(MappingProfiles));
             services.AddDbContext<DataContext>(x => x.UseNpgsql(_config.GetConnectionString("DefaultConnection")));
                 
             services.AddSwaggerGen(c =>
