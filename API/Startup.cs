@@ -32,11 +32,6 @@ namespace API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddControllers();
-            services.AddScoped<ITokenInterface, TokenRepository>();
-            services.AddDbContext<DataContext>(x => x.UseNpgsql(_config.GetConnectionString("DefaultConnection")));
-
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(opt => 
                 { 
@@ -48,6 +43,10 @@ namespace API
                         ValidateAudience = false
                     };
                 });
+            services.AddControllers();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ITokenInterface, TokenRepository>();
+            services.AddDbContext<DataContext>(x => x.UseNpgsql(_config.GetConnectionString("DefaultConnection")));
                 
             services.AddSwaggerGen(c =>
             {
@@ -68,6 +67,8 @@ namespace API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
