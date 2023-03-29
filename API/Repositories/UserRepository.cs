@@ -19,17 +19,17 @@ namespace API.Repositories
 
         public async Task<User> GetUser(int id)
         {
-            return await _context.Users.Include(x => x.Rentals).FirstOrDefaultAsync(x => x.Id == id);
+            return await _context.Users.Include(x => x.Rentals).Include(x => x.LikedBooks).FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<User> GetUserByUsername(string username)
         {
-            return await _context.Users.Include(x => x.Rentals).SingleOrDefaultAsync(u => u.UserName == username);
+            return await _context.Users.Include(x => x.Rentals).Include(x => x.LikedBooks).SingleOrDefaultAsync(u => u.UserName == username);
         }
 
         public async Task<List<User>> GetUsers()
         {
-            return await _context.Users.Include(x => x.Rentals).ToListAsync();
+            return await _context.Users.Include(x => x.Rentals).Include(x => x.LikedBooks).ToListAsync();
         }
     }
 }

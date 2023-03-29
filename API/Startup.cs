@@ -48,6 +48,7 @@ namespace API
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<ITokenInterface, TokenRepository>();
+            services.AddScoped<ILikeRepository, LikeRepository>();
             services.AddAutoMapper(typeof(MappingProfiles));
             services.AddDbContext<DataContext>(x => x.UseNpgsql(_config.GetConnectionString("DefaultConnection")));
                 

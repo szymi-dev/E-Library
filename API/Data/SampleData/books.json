@@ -1,0 +1,65 @@
+[
+    {
+        "Title" : "After",
+        "Author" : "Anna Todd",
+        "PublicationYear" : 2012,
+        "Description" : "Książka w której dziewczyna poznaje chłopaka który zmienia całe jej życie",
+        "Count" : 20
+    },
+    {
+        "Title" : "Promyczek",
+        "Author" : "Kim Holden",
+        "PublicationYear" : 2005,
+        "Description" : "Dziewczyna pomimo problemów i tragedii i tak cieszy się życiem",
+        "Count" : 50
+    },
+    {
+        "Title" : "Chłopak który zakradł się przez moje okno",
+        "Author" : "Christi Moseli",
+        "PublicationYear" : 2017,
+        "Description" : "Książka w której chłopak zakradał się do sypialni pewnej dziewczyny i razem zasypiali przytuleni",
+        "Count" : 10
+    },
+    {
+        "Title" : "Pies który jechał koleją",
+        "Author" : "Roman Pisarski",
+        "PublicationYear" : 1967,
+        "Description" : "Opowiadanie dla dzieci o losach psa o imieniu Lampo",
+        "Count" : 50
+    },
+    {
+        "Title" : "Ania z zielonego wzgórza",
+        "Author" : "Lucy Maud",
+        "PublicationYear" : 1908,
+        "Description" : "Historia osieroconej dziewczynki",
+        "Count" : 40
+    },
+    {
+        "Title" : "Krzyżacy",
+        "Author" : "Henryk Sienkiewicz",
+        "PublicationYear" : 1890,
+        "Description" : "Dzieje średniowiecznej polski",
+        "Count" : 35
+    },
+    {
+        "Title" : "Quo Vadis",
+        "Author" : "Henryk Sienkiewicz",
+        "PublicationYear" : 1896,
+        "Description" : "Powieść historyczna",
+        "Count" : 50
+    },
+    {
+        "Title" : "Dziady część III",
+        "Author" : "Adam Mickiewicz",
+        "PublicationYear" : 1832,
+        "Description" : "Obrzędy staropolskie opowieść",
+        "Count" : 25
+    },
+    {
+        "Title" : "Pan Tadeusz",
+        "Author" : "Adam Mickiewicz",
+        "PublicationYear" : 1834,
+        "Description" : "Ostatni zjadz na Litwie opowieść",
+        "Count" : 40
+    }
+]
