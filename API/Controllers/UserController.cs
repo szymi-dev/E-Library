@@ -41,5 +41,35 @@ namespace API.Controllers
 
             return users;
         }
+
+        [HttpGet("GetFee/{userId}")]
+        public ActionResult<decimal> GetUserFee(int userId)
+        {
+            var fee = _userRepo.GetFee(userId);
+            return Ok(fee);
+        }
+
+        [HttpPut("Update/{id}")]
+        public async Task<IActionResult> Update(int id, User user)
+        {
+            if (id != user.Id)
+            {
+                return BadRequest();
+            }
+            await _userRepo.UpdateAsync(user);
+            return NoContent();
+        }
+
+        [HttpPut("ResetFee/{id}")]
+        public async Task<IActionResult> ResetFee(int id)
+        {
+            var user = await _userRepo.GetUser(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            await _userRepo.ResetFeeAsync(user);
+            return NoContent();
+        }
     }
 }

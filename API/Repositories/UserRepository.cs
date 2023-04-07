@@ -31,5 +31,24 @@ namespace API.Repositories
         {
             return await _context.Users.Include(x => x.Rentals).Include(x => x.LikedBooks).ToListAsync();
         }
+
+        public decimal GetFee(int userId)
+        {
+            var user = _context.Users.FirstOrDefault(u => u.Id == userId);
+            return user?.Fee ?? 0m;
+        }
+
+        public async Task UpdateAsync(User user)
+        {
+            _context.Entry(user).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task ResetFeeAsync(User user)
+        {
+            user.Fee = 0;
+            _context.Entry(user).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+        }
     }
 }

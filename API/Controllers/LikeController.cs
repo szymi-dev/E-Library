@@ -32,9 +32,9 @@ namespace API.Controllers
         }
 
         [HttpPost("AddBookToFavorites/{bookId}")]
-        public async Task<ActionResult> AddBookToFavorites(int bookId, string username)
+        public async Task<ActionResult> AddBookToFavorites(int bookId)
         {
-            username = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var username = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             // var user = await _userRepository.GetUserByUsername(username);
             try
             {
@@ -48,9 +48,9 @@ namespace API.Controllers
         }
 
         [HttpDelete("DeleteBookFromFavorites/{bookId}")]
-        public async Task<ActionResult> RemoveBookFromFavorites(int bookId, string username)
+        public async Task<ActionResult> RemoveBookFromFavorites(int bookId)
         {
-            username = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var username = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
             try
             {

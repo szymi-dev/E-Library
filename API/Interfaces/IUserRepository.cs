@@ -11,5 +11,8 @@ namespace API.Interfaces
         Task<List<User>> GetUsers();
         Task<User> GetUser(int id);
         Task<User> GetUserByUsername(string username);
+        decimal GetFee(int userId);
+        Task UpdateAsync(User user);
+        Task ResetFeeAsync(User user);
     }
 }

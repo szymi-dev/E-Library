@@ -11,6 +11,8 @@ namespace API.Entities
         public string UserName { get; set; }
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
+        public decimal Funds { get; set; }
+        public decimal Fee { get; set; }
         public List<Rental> Rentals { get; set; }
         public List<Book> LikedBooks { get; set; }
     }

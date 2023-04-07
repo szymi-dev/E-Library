@@ -13,6 +13,7 @@ namespace API.AutoMapper
         public MappingProfiles()
         {
             CreateMap<Book, BookDto>();
+            CreateMap<Rental, RentalDto>().ForMember(dest => dest.Username, opt => opt.MapFrom(src => src.User.UserName));
         }
     }
 }
